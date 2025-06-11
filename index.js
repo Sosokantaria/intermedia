@@ -2,12 +2,14 @@ const config = {
   paths: {
     components: {
       header: 'components/header/header.html',
+      firstSection:'components/firstSection/first-section.html',
       footer: 'components/footer/footer.html',
       loader: 'components/loader.html'
     }
   },
   selectors: {
     header: '#header-container',
+    firstSection: '#first-section-container',
     footer: '#footer-container'
   }
 };
@@ -33,8 +35,11 @@ async function init() {
     await new Promise(resolve => document.addEventListener('DOMContentLoaded', resolve));
   }
   const header = document.querySelector(config.selectors.header);
+  const firstSection = document.querySelector(config.selectors.firstSection);
   const footer = document.querySelector(config.selectors.footer);
+  
   if (header) await loadComponent('header', header);
+  if (firstSection) await loadComponent('firstSection', firstSection);
   if (footer) await loadComponent('footer', footer);
 }
 
