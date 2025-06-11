@@ -12,6 +12,7 @@
   --color-info: #3498db;
 
   --text-primary: #636363;
+  --text-secondary: #3e3e3e;
   --text-light: #ffffff;
   --text-lighter-muted: #b5b5b5;
   --text-lightest-muted: #d0d0d0;
@@ -20,6 +21,7 @@
   --text-muted-darker: #222222;
 
   --border-color-primary: #e5e5e5e5;
+  --border-color-secondary: #dadada;
   --border-color-ligt: #b7b7b7;
 
   --font-primary: "Inter", sans-serif;
@@ -86,6 +88,7 @@ body {
   white-space: nowrap;
   display: flex;
   align-items: center;
+  font-family: var(--font-primary);
   gap: 4px;
   position: relative;
 }
