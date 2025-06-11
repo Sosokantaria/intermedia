@@ -1,6 +1,6 @@
 .second-section-card {
   background: var(--color-white);
-  max-width: 450px;
+
   margin: 0 auto;
   overflow: hidden;
   transition: transform 0.2s ease;
@@ -13,7 +13,7 @@
   transform: translateY(-4px);
 }
 
-.card__image {
+.second-section-card__image {
   width: 100%;
   height: 200px;
   border-radius: var(--radius-base);
@@ -23,13 +23,13 @@
   justify-content: center;
 }
 
-.card__image img {
+.second-section-card__image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.card__title {
+.second-section-card__title {
   font-family: var(--font-primary);
   font-weight: var(--font-medium);
   font-size: var(--text-base);
@@ -38,19 +38,19 @@
   margin-bottom: 8px;
 }
 
-.card__content {
+.second-section-card__content {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
 
-.card__footer {
+.second-section-card__footer {
   display: flex;
   align-items: center;
   gap: 12px;
 }
 
-.card__author-img {
+.second-section-card__author-img {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -58,13 +58,13 @@
   flex-shrink: 0;
 }
 
-.card__author-info {
+.second-section-card__author-info {
   display: flex;
-  flex-direction: column;
+  align-items: center;
   gap: 4px;
 }
 
-.card__author-name {
+.second-section-card__author-name {
   font-family: var(--font-primary);
   font-weight: var(--font-medium);
   font-size: var(--text-sm);
@@ -72,7 +72,7 @@
   display: block;
 }
 
-.card__date {
+.second-section-card__date {
   font-family: var(--font-primary);
   font-size: var(--text-xs);
   color: var(--text-muted);
@@ -84,14 +84,14 @@
     flex-direction: row-reverse;
     align-items: center;
   }
-  .second-section-card .card__image {
+  .second-section-card__image {
     display: flex;
     align-items: center;
     justify-content: center;
     max-width: 88px;
     max-height: 87px;
   }
-  .card__author-info {
+  .second-section-card__author-info {
     flex-direction: row;
     gap: 4px;
   }

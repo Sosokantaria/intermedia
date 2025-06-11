@@ -21,6 +21,7 @@
   --text-muted-darker: #222222;
   --text-gray: #1a1a1a;
   --text-gray-light: #2e2e2e;
+  --text-gray-lighter: #696969;
 
   --border-color-primary: #e5e5e5e5;
   --border-color-secondary: #dadada;
@@ -85,11 +86,11 @@ body {
 main {
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  /* gap: 60px; */
 }
 
 .main__wrapper {
-  padding: 60px;
+  padding: 60px 60px 0px 60px;
 }
 
 .button-text {
@@ -151,7 +152,10 @@ main {
 
 @media screen and (max-width: 768px) {
   main {
-    padding: 0px 30px;
+    margin-top: 30px;
+  }
+  .main__wrapper {
+    padding: 15px 30px;
     gap: 0px;
   }
 }

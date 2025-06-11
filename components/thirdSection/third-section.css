@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column;
   gap: 48px;
+  margin: 30px 0px;
 }
 
 .third__top__content {
@@ -47,5 +48,20 @@
     text-overflow: ellipsis;
     max-width: 100%;
     line-height: 1.5;
+  }
+}
+.third__section__cards {
+  display: flex;
+  gap: 20px;
+}
+@media screen and (max-width: 768px) {
+  .third__section {
+    padding: 20px 16px 16px 16px;
+  }
+  .third__top__content img {
+    max-width: 345px;
+  }
+  .third__section__cards{
+flex-direction: column;
   }
 }
