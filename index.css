@@ -20,6 +20,7 @@
   --text-muted-dark: #4e4e4e;
   --text-muted-darker: #222222;
   --text-gray: #1a1a1a;
+  --text-gray-light: #2e2e2e;
 
   --border-color-primary: #e5e5e5e5;
   --border-color-secondary: #dadada;
@@ -81,6 +82,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 60px;
+  gap: 60px;
+}
+
 .button-text {
   color: var(--text-primary);
   background-color: transparent;
@@ -136,4 +144,11 @@ body {
   padding: 10px 17px;
   cursor: pointer;
   white-space: nowrap;
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    padding: 0px 30px;
+    gap: 0px;
+  }
 }

@@ -1,46 +1,29 @@
-const config = {
-  paths: {
-    components: {
-      header: 'components/header/header.html',
-      firstSection:'components/firstSection/first-section.html',
-      footer: 'components/footer/footer.html',
-      loader: 'components/loader.html'
-    }
-  },
-  selectors: {
-    header: '#header-container',
-    firstSection: '#first-section-container',
-    footer: '#footer-container'
-  }
+const paths = {
+  header: "components/header/header.html",
+  footer: "components/footer/footer.html",
+  firstSection: "components/firstSection/first-section.html",
+  secondSection: "components/secondSection/second-section.html"
 };
 
-async function loadComponent(name, container) {
+async function loadComponent(path, containerId) {
   try {
-    const loaderResponse = await fetch(config.paths.components.loader);
-    const loaderHtml = await loaderResponse.text();
-    container.innerHTML = loaderHtml;
-    
-    const componentPath = config.paths.components[name];
-    const response = await fetch(componentPath);
+    const response = await fetch(path);
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
     const html = await response.text();
-    container.innerHTML = html;
+    const container = document.getElementById(containerId);
+    if (container) {
+      container.innerHTML = html;
+    }
   } catch (error) {
-    console.error(`Error loading ${name}:`, error);
-    container.innerHTML = `<div class="error">Failed to load ${name}</div>`;
+    console.error(`Error loading ${path}:`, error);
   }
 }
 
-async function init() {
-  if (document.readyState === 'loading') {
-    await new Promise(resolve => document.addEventListener('DOMContentLoaded', resolve));
-  }
-  const header = document.querySelector(config.selectors.header);
-  const firstSection = document.querySelector(config.selectors.firstSection);
-  const footer = document.querySelector(config.selectors.footer);
-  
-  if (header) await loadComponent('header', header);
-  if (firstSection) await loadComponent('firstSection', firstSection);
-  if (footer) await loadComponent('footer', footer);
-}
-
-init();
+document.addEventListener("DOMContentLoaded", async () => {
+  await loadComponent(paths.header, "header-container");
+  await loadComponent(paths.firstSection, "first-section-container");
+  await loadComponent(paths.secondSection, "second-section-container");
+  await loadComponent(paths.footer, "footer-container");
+});
