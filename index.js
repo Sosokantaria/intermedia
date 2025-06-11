@@ -2,7 +2,8 @@ const paths = {
   header: "components/header/header.html",
   footer: "components/footer/footer.html",
   firstSection: "components/firstSection/first-section.html",
-  secondSection: "components/secondSection/second-section.html"
+  secondSection: "components/secondSection/second-section.html",
+  thirdSection: "components/thirdSection/third-section.html",
 };
 
 async function loadComponent(path, containerId) {
@@ -25,5 +26,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   await loadComponent(paths.header, "header-container");
   await loadComponent(paths.firstSection, "first-section-container");
   await loadComponent(paths.secondSection, "second-section-container");
+  await loadComponent(paths.thirdSection, "third-section-container");
   await loadComponent(paths.footer, "footer-container");
 });

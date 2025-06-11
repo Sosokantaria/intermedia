@@ -85,8 +85,11 @@ body {
 main {
   display: flex;
   flex-direction: column;
-  padding: 60px;
   gap: 60px;
+}
+
+.main__wrapper {
+  padding: 60px;
 }
 
 .button-text {
