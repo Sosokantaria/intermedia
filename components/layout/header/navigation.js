@@ -141,7 +141,7 @@ function createNavItem(item) {
   return li;
 }
 
-function initialize() {
+export function initializeNavigation() {
   const desktopNavList = document.getElementById("nav-list");
   const mobileNavList = document.getElementById("mobile-nav-list");
   
@@ -168,20 +168,23 @@ function initialize() {
   });
 }
 
-const observer = new MutationObserver((mutations) => {
-  const desktopNavList = document.getElementById("nav-list");
-  const mobileNavList = document.getElementById("mobile-nav-list");
-  if (desktopNavList && mobileNavList) {
-    observer.disconnect();
-    initialize();
-  }
-});
+// Initialize when DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+  const observer = new MutationObserver((mutations) => {
+    const desktopNavList = document.getElementById("nav-list");
+    const mobileNavList = document.getElementById("mobile-nav-list");
+    if (desktopNavList && mobileNavList) {
+      observer.disconnect();
+      initializeNavigation();
+    }
+  });
 
-observer.observe(document.body, {
-  childList: true,
-  subtree: true,
+  observer.observe(document.body, {
+    childList: true,
+    subtree: true,
+  });
 });
 
 window.addEventListener("resize", () => {
-  initialize();
+  initializeNavigation();
 });
