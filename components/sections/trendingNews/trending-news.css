@@ -1,0 +1,139 @@
+.trending-news {
+  position: relative;
+  padding: 0; 
+  width: 100%;
+  overflow: hidden;
+}
+
+.trending-news::before,
+.trending-news::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: var(--border-color-secondary);
+  z-index: 1;
+}
+
+.trending-news::before {
+  left: 48px; 
+}
+
+.trending-news::after {
+  right: 48px; 
+}
+
+.trending-news__title-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 32px;
+  padding: 0 48px; 
+}
+
+.trending-news__title {
+  font-family: var(--font-primary);
+  font-weight: var(--font-bold);
+  font-size: var(--text-lg);
+  color: var(--color-dark);
+  white-space: nowrap;
+}
+
+.trending-news__title-container hr {
+  width: 100%;
+  height: 1px;
+  background-color: var(--border-color-secondary);
+  border: none;
+  margin: 0;
+}
+
+.trending-news__cards {
+  width: auto;
+  margin: 0 -48px; 
+  min-height: 500px;
+}
+
+.swiper-slide {
+  border-radius: var(--radius-sm);
+  position: relative;
+}
+
+.swiper-slide::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: black !important; 
+  border-radius: inherit; 
+  z-index: 1; 
+  transition: opacity 0.3s ease;
+}
+
+.swiper-slide-active::before {
+  opacity: 0; 
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  top: 50%;
+  width: 46px !important;
+  height: 46px !important;
+  cursor: pointer;
+  color: transparent;
+  background: black ;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.swiper-button-prev {
+  left: 20px;
+}
+
+.swiper-button-next {
+  right: 20px;
+}
+
+.swiper-button-prev.material-symbols-outlined,
+.swiper-button-next.material-symbols-outlined {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-light) !important;
+}
+
+@media screen and (max-width: 1068px) {
+  .trending-news {
+    padding: 0;
+  }
+  .trending-news::before {
+    left: 24px;
+  }
+  .trending-news::after {
+    right: 24px;
+  }
+  .trending-news__title-container {
+    padding: 0 24px;
+  }
+  .trending-news__cards {
+    margin: 0 -24px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .trending-news {
+    padding: 0;
+  }
+  .trending-news::before,
+  .trending-news::after {
+    display: none;
+  }
+  .trending-news__title-container {
+    padding: 0 24px;
+  }
+  .trending-news__cards {
+    margin: 0;
+  }
+}

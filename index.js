@@ -1,11 +1,13 @@
+import { initializeTrendingNews } from './components/sections/trendingNews/trending-news.js';
+
 const paths = {
-  header: "components/header/header.html",
-  footer: "components/footer/footer.html",
-  firstSection: "components/firstSection/first-section.html",
-  secondSection: "components/secondSection/second-section.html",
-  thirdSection: "components/thirdSection/third-section.html",
-  foursSection: "components/foursSection/fours-section.html",
-  fifthSection: "components/fifthSection/fifth-section.html"
+  header: "components/layout/header/header.html",
+  footer: "components/layout/footer/footer.html",
+  featuredNews: "components/sections/featuredNews/featured-news.html",
+  latestNews: "components/sections/latestNews/latest-news.html",
+  categoryNews: "components/sections/categoryNews/category-news.html",
+  trendingNews: "components/sections/trendingNews/trending-news.html",
+  reporterProfiles: "components/sections/reporterProfiles/reporter-profiles.html"
 };
 
 async function loadSection(sectionId, htmlPath) {
@@ -25,13 +27,14 @@ async function loadSection(sectionId, htmlPath) {
 }
 
 async function initializeSections() {
-  await loadSection("header-container", "components/header/header.html");
-  await loadSection("first-section-container", "components/firstSection/first-section.html");
-  await loadSection("second-section-container", "components/secondSection/second-section.html");
-  await loadSection("third-section-container", "components/thirdSection/third-section.html");
-  await loadSection("fours-section-container", "components/foursSection/fours-section.html");
-  await loadSection("fifth-section-container", "components/fifthSection/fifth-section.html");
-  await loadSection("footer-container", "components/footer/footer.html");
+  await loadSection("header-container", paths.header);
+  await loadSection("featured-news-container", paths.featuredNews);
+  await loadSection("latest-news-container", paths.latestNews);
+  await loadSection("category-news-container", paths.categoryNews);
+  await loadSection("trending-news-container", paths.trendingNews);
+  await loadSection("reporter-profiles-container", paths.reporterProfiles);
+  await loadSection("footer-container", paths.footer);
+  await initializeTrendingNews();
 }
 
 document.addEventListener("DOMContentLoaded", initializeSections);

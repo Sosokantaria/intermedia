@@ -16,69 +16,58 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=visibility&display=swap"
     />
     <link rel="stylesheet" href="index.css" />
-    <link rel="stylesheet" href="components/header/header.css" />
-    <link rel="stylesheet" href="components/footer/footer.css" />
-    <link rel="stylesheet" href="components/firstSection/first-section.css" />
-    <link
-      rel="stylesheet"
-      href="components/firstSection/cards/firstCard/firstCard.css"
-    />
-    <link
-      rel="stylesheet"
-      href="components/firstSection/cards/secondCard/secondCard.css"
-    />
-    <link rel="stylesheet" href="components/secondSection/second-section.css" />
-    <link
-      rel="stylesheet"
-      href="components/secondSection/card/second-section-card.css"
-    />
-    <link rel="stylesheet" href="components/thirdSection/third-section.css" />
-    <link
-      rel="stylesheet"
-      href="components/thirdSection/card/third-section-card.css"
-    />
-    <link rel="stylesheet" href="components/foursSection/fours-section.css" />
-    <link rel="stylesheet" href="components/foursSection/card/fours-card.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <link rel="stylesheet" href="components/fifthSection/fifth-section.css" />
-    <link rel="stylesheet" href="components/fifthSection/card/fifth-card.css">
+    <!-- Layout Components -->
+    <link rel="stylesheet" href="components/layout/header/header.css" />
+    <link rel="stylesheet" href="components/layout/footer/footer.css" />
+    <!-- Section Components -->
+    <link rel="stylesheet" href="components/sections/featuredNews/featured-news.css" />
+    <link rel="stylesheet" href="components/sections/featuredNews/cards/mainCard/main-card.css" />
+    <link rel="stylesheet" href="components/sections/featuredNews/cards/secondaryCard/secondary-card.css" />
+    <link rel="stylesheet" href="components/sections/latestNews/latest-news.css" />
+    <link rel="stylesheet" href="components/sections/latestNews/card/latest-news-card.css" />
+    <link rel="stylesheet" href="components/sections/categoryNews/category-news.css" />
+    <link rel="stylesheet" href="components/sections/categoryNews/card/category-news-card.css" />
+    <link rel="stylesheet" href="components/sections/trendingNews/trending-news.css" />
+    <link rel="stylesheet" href="components/sections/trendingNews/card/trending-news-card.css" />
+    <link rel="stylesheet" href="components/sections/reporterProfiles/reporter-profiles.css" />
+    <link rel="stylesheet" href="components/sections/reporterProfiles/card/reporter-profile-card.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   </head>
   <body>
     <!-- Header will be loaded here -->
     <div id="header-container"></div>
 
     <main>
-      <!-- First section will be loaded here -->
-      <div id="first-section-container"></div>
-      <!-- Second section will be loaded here -->
-      <div id="second-section-container"></div>
-      <!-- Third section will be loaded here -->
-      <div id="third-section-container"></div>
-      <!-- Fours section will be loaded here -->
-      <div id="fours-section-container"></div>
-      <!-- Fifth section will be loaded here -->
-      <div id="fifth-section-container"></div>
+      <!-- Featured News section will be loaded here -->
+      <div id="featured-news-container"></div>
+      <!-- Latest News section will be loaded here -->
+      <div id="latest-news-container"></div>
+      <!-- Category News section will be loaded here -->
+      <div id="category-news-container"></div>
+      <!-- Trending News section will be loaded here -->
+      <div id="trending-news-container"></div>
+      <!-- Reporter Profiles section will be loaded here -->
+      <div id="reporter-profiles-container"></div>
     </main>
 
     <!-- Footer will be loaded here -->
     <div id="footer-container"></div>
 
-    <script src="index.js"></script>
-    <script src="components/header/navigation.js"></script>
-    <script src="components/firstSection/first-section.js"></script>
-    <script src="components/firstSection/cards/firstCard/firstCard.js"></script>
-    <script src="components/firstSection/cards/secondCard/secondCard.js"></script>
-    <script src="components/secondSection/second-section.js"></script>
-    <script src="components/secondSection/card/second-section-card.js"></script>
-    <script src="components/thirdSection/third-section.js"></script>
-    <script src="components/thirdSection/card/third-section-card.js"></script>
+    <script type="module" src="index.js"></script>
+    <!-- Layout Components -->
+    <script src="components/layout/header/navigation.js"></script>
+    <!-- Section Components -->
+    <script type="module" src="components/sections/featuredNews/featured-news.js"></script>
+    <script type="module" src="components/sections/featuredNews/cards/mainCard/main-card.js"></script>
+    <script type="module" src="components/sections/featuredNews/cards/secondaryCard/secondary-card.js"></script>
+    <script type="module" src="components/sections/latestNews/latest-news.js"></script>
+    <script type="module" src="components/sections/latestNews/card/latest-news-card.js"></script>
+    <script type="module" src="components/sections/categoryNews/category-news.js"></script>
+    <script type="module" src="components/sections/categoryNews/card/category-news-card.js"></script>
+    <script type="module" src="components/sections/trendingNews/trending-news.js"></script>
+    <script type="module" src="components/sections/trendingNews/card/trending-news-card.js"></script>
+    <script type="module" src="components/sections/reporterProfiles/reporter-profiles.js"></script>
+    <script type="module" src="components/sections/reporterProfiles/card/reporter-profile-card.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="components/foursSection/card/fours-card.js"></script>
-    <script src="components/foursSection/fours-section.js"></script>
-    <script src="components/fifthSection/fifth-section.js"></script>
-    <script src="components/fifthSection/card/fifth-card.js"></script>
   </body>
 </html>
