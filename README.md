@@ -75,7 +75,7 @@ git clone [repository-url]
 
 Here are the PageSpeed Insights scores for the InterMedia website:
 
-![PageSpeed Insights Score](assets/pagespeed_insights.png)
+![PageSpeed Insights Score](assets/pagespeedInsights.png)
 
 
 ## Components
