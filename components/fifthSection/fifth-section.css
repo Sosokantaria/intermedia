@@ -21,25 +21,25 @@
 .fifth-section-card-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, auto);
+  grid-template-rows: repeat(2, auto);
   gap: 20px;
   padding: 20px 0;
 }
 
 @media screen and (max-width: 1200px) {
   .fifth-section-card-container {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media screen and (max-width: 900px) {
-  .fifth-section-card-container {
     grid-template-columns: repeat(2, 1fr);
   }
+  .fifth-section-card:nth-last-child(-n+4) {
+    display: none;
+  }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
   .fifth-section-card-container {
     grid-template-columns: 1fr;
+  }
+  .fifth-section-card:nth-last-child(-n+4) {
+    display: none;
   }
 }

@@ -90,7 +90,7 @@
     display: block;
   }
   
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1000px) {
     .third-section-card {
       align-items: center;
       background-color: transparent;
