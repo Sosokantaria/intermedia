@@ -70,11 +70,13 @@ git clone [repository-url]
 
 4. Open `index.html` in your browser
 
+
 ## PageSpeed Insights Scores
 
 Here are the PageSpeed Insights scores for the InterMedia website:
 
 ![PageSpeed Insights Score](assets/pagespeed_insights.png)
+
 
 ## Components
 
