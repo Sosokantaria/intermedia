@@ -27,12 +27,19 @@
   gap: 20px;
   padding: 20px 0;
 }
-
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1400px) {
+  .reporter-profiles__cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .reporter-profile-card:nth-last-child(-n + 2) {
+    display: none;
+  }
+}
+@media screen and (max-width: 1100px) {
   .reporter-profiles__cards {
     grid-template-columns: repeat(2, 1fr);
   }
-  .reporter-profile-card:nth-last-child(-n+4) {
+  .reporter-profile-card:nth-last-child(-n + 4) {
     display: none;
   }
 }
@@ -41,7 +48,7 @@
   .reporter-profiles__cards {
     grid-template-columns: 1fr;
   }
-  .reporter-profile-card:nth-last-child(-n+4) {
+  .reporter-profile-card:nth-last-child(-n + 4) {
     display: none;
   }
 }

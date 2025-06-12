@@ -215,3 +215,24 @@ nav ul {
     border-color: var(--border-color-ligt);
   }
 }
+
+#nav-list {
+  display: flex;
+}
+
+#mobile-nav-list {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  #nav-list {
+    display: none;
+  }
+  
+  #mobile-nav-list {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+}

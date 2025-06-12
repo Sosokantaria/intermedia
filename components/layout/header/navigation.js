@@ -144,11 +144,12 @@ function createNavItem(item) {
 function initialize() {
   const desktopNavList = document.getElementById("nav-list");
   const mobileNavList = document.getElementById("mobile-nav-list");
-  const navList = window.innerWidth <= BREAKPOINTS.MOBILE ? mobileNavList : desktopNavList;
   
-  if (!navList) return;
+  if (!desktopNavList || !mobileNavList) return;
 
-  navList.innerHTML = "";
+  desktopNavList.innerHTML = "";
+  mobileNavList.innerHTML = "";
+  
   const visibleCount = getVisibleItemsCount();
   const showCategory = window.innerWidth <= BREAKPOINTS.LAPTOP;
 
@@ -159,16 +160,18 @@ function initialize() {
     }
     
     if (index >= visibleCount && item.path !== "/more" && item.path !== "/category") return;
-    const navItem = createNavItem(item);
-    navList.appendChild(navItem);
+    
+    const desktopNavItem = createNavItem(item);
+    const mobileNavItem = createNavItem(item);
+    desktopNavList.appendChild(desktopNavItem);
+    mobileNavList.appendChild(mobileNavItem);
   });
 }
 
-// Initialize on load and resize
 const observer = new MutationObserver((mutations) => {
   const desktopNavList = document.getElementById("nav-list");
   const mobileNavList = document.getElementById("mobile-nav-list");
-  if (desktopNavList || mobileNavList) {
+  if (desktopNavList && mobileNavList) {
     observer.disconnect();
     initialize();
   }
