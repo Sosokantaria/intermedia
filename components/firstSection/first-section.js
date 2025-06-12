@@ -87,3 +87,4 @@ document.addEventListener("DOMContentLoaded", () => {
     console.error("Required card loading functions are not available!");
   }
 });
+ 

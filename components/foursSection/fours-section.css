@@ -1,7 +1,35 @@
+.fours__section__container {
+  position: relative;
+  padding: 0; 
+  width: 100%;
+  overflow: hidden;
+}
+
+.fours__section__container::before,
+.fours__section__container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: var(--border-color-secondary);
+  z-index: 1;
+}
+
+.fours__section__container::before {
+  left: 48px; 
+}
+
+.fours__section__container::after {
+  right: 48px; 
+}
+
 .fours__section__title-container {
   display: flex;
   align-items: center;
   gap: 15px;
+  margin-bottom: 32px;
+  padding: 0 48px; 
 }
 
 .fours__section__title {
@@ -18,4 +46,94 @@
   background-color: var(--border-color-secondary);
   border: none;
   margin: 0;
+}
+
+.fours__section__cards {
+  width: auto;
+  margin: 0 -48px; 
+  min-height: 500px;
+}
+
+.swiper-slide {
+  border-radius: var(--radius-sm);
+  position: relative;
+}
+
+.swiper-slide::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: black !important; 
+  border-radius: inherit; 
+  z-index: 1; 
+  transition: opacity 0.3s ease;
+}
+
+.swiper-slide-active::before {
+  opacity: 0; 
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  top: 50%;
+  width: 46px !important;
+  height: 46px !important;
+  cursor: pointer;
+  color: transparent;
+  background: black ;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.swiper-button-prev {
+  left: 20px;
+}
+
+.swiper-button-next {
+  right: 20px;
+}
+
+.swiper-button-prev.material-symbols-outlined,
+.swiper-button-next.material-symbols-outlined {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-light) !important;
+}
+
+@media screen and (max-width: 1068px) {
+  .fours__section__container {
+    padding: 0;
+  }
+  .fours__section__container::before {
+    left: 24px;
+  }
+  .fours__section__container::after {
+    right: 24px;
+  }
+  .fours__section__title-container {
+    padding: 0 24px;
+  }
+  .fours__section__cards {
+    margin: 0 -24px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .fours__section__container {
+    padding: 0;
+  }
+  .fours__section__container::before,
+  .fours__section__container::after {
+    display: none;
+  }
+  .fours__section__title-container {
+    padding: 0 24px;
+  }
+  .fours__section__cards {
+    margin: 0;
+  }
 }
