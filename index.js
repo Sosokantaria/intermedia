@@ -5,6 +5,7 @@ const paths = {
   secondSection: "components/secondSection/second-section.html",
   thirdSection: "components/thirdSection/third-section.html",
   foursSection: "components/foursSection/fours-section.html",
+  fifthSection: "components/fifthSection/fifth-section.html"
 };
 
 async function loadSection(sectionId, htmlPath) {
@@ -29,6 +30,7 @@ async function initializeSections() {
   await loadSection("second-section-container", "components/secondSection/second-section.html");
   await loadSection("third-section-container", "components/thirdSection/third-section.html");
   await loadSection("fours-section-container", "components/foursSection/fours-section.html");
+  await loadSection("fifth-section-container", "components/fifthSection/fifth-section.html");
   await loadSection("footer-container", "components/footer/footer.html");
 }
 
