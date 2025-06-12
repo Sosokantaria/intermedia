@@ -1,0 +1,21 @@
+.home-page {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 40px 0;
+}
+
+.home-page__featured-news,
+.home-page__latest-news,
+.home-page__category-news,
+.home-page__trending-news,
+.home-page__reporter-profiles {
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .home-page {
+    gap: 24px;
+    padding: 24px 0;
+  }
+}

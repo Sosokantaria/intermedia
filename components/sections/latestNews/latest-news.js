@@ -45,7 +45,7 @@ const latestNewsCardsData = [
   },
 ];
 
-async function initializeLatestNews() {
+export async function initializeLatestNews() {
   try {
     await new Promise((resolve) => {
       const checkContainer = () => {
@@ -77,12 +77,13 @@ async function initializeLatestNews() {
   }
 }
 
-const waitForLatestNews = async () => {
-  if (typeof loadNewsCard === "function") {
-    await initializeLatestNews();
-  } else {
-    console.error("Latest news card loading function is not available!");
-  }
-};
-
-document.addEventListener("DOMContentLoaded", waitForLatestNews);
+// Remove the DOMContentLoaded event listener since we're now exporting the function
+// const waitForLatestNews = async () => {
+//   if (typeof loadNewsCard === "function") {
+//     await initializeLatestNews();
+//   } else {
+//     console.error("Latest news card loading function is not available!");
+//   }
+// };
+// 
+// document.addEventListener("DOMContentLoaded", waitForLatestNews);

@@ -27,7 +27,7 @@ const categoryNewsCardsData = [
   }
 ];
 
-async function initializeCategoryNews() {
+export async function initializeCategoryNews() {
   try {
     await new Promise((resolve) => {
       const checkContainer = () => {
@@ -67,4 +67,5 @@ const waitForCategoryNews = async () => {
   }
 };
 
-document.addEventListener("DOMContentLoaded", waitForCategoryNews);
+// Remove the DOMContentLoaded event listener since we're now exporting the function
+// document.addEventListener("DOMContentLoaded", waitForCategoryNews);

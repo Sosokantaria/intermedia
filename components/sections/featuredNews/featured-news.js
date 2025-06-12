@@ -43,7 +43,7 @@ const cardsData = [
   },
 ];
 
-async function initializeFeaturedNews() {
+export async function initializeFeaturedNews() {
   try {
     await new Promise((resolve) => {
       const checkContainer = () => {
@@ -82,7 +82,3 @@ async function initializeFeaturedNews() {
     console.error("Error in initializeFeaturedNews:", error);
   }
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-  initializeFeaturedNews();
-});

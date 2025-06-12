@@ -1,40 +1,54 @@
-import { initializeTrendingNews } from './components/sections/trendingNews/trending-news.js';
-
-const paths = {
-  header: "components/layout/header/header.html",
-  footer: "components/layout/footer/footer.html",
-  featuredNews: "components/sections/featuredNews/featured-news.html",
-  latestNews: "components/sections/latestNews/latest-news.html",
-  categoryNews: "components/sections/categoryNews/category-news.html",
-  trendingNews: "components/sections/trendingNews/trending-news.html",
-  reporterProfiles: "components/sections/reporterProfiles/reporter-profiles.html"
-};
-
-async function loadSection(sectionId, htmlPath) {
+async function loadComponent(container, path) {
   try {
-    const response = await fetch(htmlPath);
+    const response = await fetch(path);
     if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
+      throw new Error(`Failed to load ${path}: ${response.status}`);
     }
     const html = await response.text();
-    const container = document.getElementById(sectionId);
-    if (container) {
-      container.innerHTML = html;
-    }
+    container.innerHTML = html;
+    return true;
   } catch (error) {
-    console.error(`Error loading section ${sectionId}:`, error);
+    console.error(`Error loading ${path}:`, error);
+    return false;
   }
 }
 
-async function initializeSections() {
-  await loadSection("header-container", paths.header);
-  await loadSection("featured-news-container", paths.featuredNews);
-  await loadSection("latest-news-container", paths.latestNews);
-  await loadSection("category-news-container", paths.categoryNews);
-  await loadSection("trending-news-container", paths.trendingNews);
-  await loadSection("reporter-profiles-container", paths.reporterProfiles);
-  await loadSection("footer-container", paths.footer);
-  await initializeTrendingNews();
+async function initializeLayout() {
+  const app = document.getElementById("app");
+  if (!app) {
+    console.error("App container not found!");
+    return;
+  }
+
+  const layoutLoaded = await loadComponent(
+    app,
+    "components/layout/layout.html"
+  );
+  if (!layoutLoaded) return;
+
+  const headerContainer = document.querySelector(".layout__header");
+  if (headerContainer) {
+    await loadComponent(
+      headerContainer,
+      "components/layout/header/header.html"
+    );
+  }
+
+  const mainContainer = document.querySelector(".layout__main");
+  if (mainContainer) {
+    await loadComponent(mainContainer, "pages/home/home.html");
+    // Initialize home page after loading
+    const { initialize } = await import("./pages/home/home.js");
+    await initialize();
+  }
+
+  const footerContainer = document.querySelector(".layout__footer");
+  if (footerContainer) {
+    await loadComponent(
+      footerContainer,
+      "components/layout/footer/footer.html"
+    );
+  }
 }
 
-document.addEventListener("DOMContentLoaded", initializeSections);
+document.addEventListener("DOMContentLoaded", initializeLayout);
