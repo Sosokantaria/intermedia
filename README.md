@@ -64,6 +64,18 @@ InterMedia/
 git clone [repository-url]
 ```
 
+2. Open the project in your code editor
+
+3. Start a local server (e.g., using Live Server in VS Code)
+
+4. Open `index.html` in your browser
+
+## PageSpeed Insights Scores
+
+Here are the PageSpeed Insights scores for the InterMedia website:
+
+![PageSpeed Insights Score](assets/pagespeed_insights.png)
+
 ## Components
 
 ### Layout Components
