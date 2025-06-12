@@ -1,0 +1,20 @@
+section {
+  width: 100%;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+  section {
+    padding: 60px 30px;
+  }
+  
+  .cards-container {
+    grid-template-columns: 1fr;
+  }
+}

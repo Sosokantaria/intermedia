@@ -1,0 +1,54 @@
+.reporter-profiles__header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.reporter-profiles__title {
+  font-family: var(--font-primary);
+  font-weight: var(--font-bold);
+  font-size: var(--text-lg);
+  color: var(--color-dark);
+  white-space: nowrap;
+}
+
+.reporter-profiles__header hr {
+  width: 100%;
+  height: 1px;
+  background-color: var(--border-color-secondary);
+  border: none;
+  margin: 0;
+}
+
+.reporter-profiles__cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 20px;
+  padding: 20px 0;
+}
+@media screen and (max-width: 1400px) {
+  .reporter-profiles__cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .reporter-profile-card:nth-last-child(-n + 2) {
+    display: none;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .reporter-profiles__cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .reporter-profile-card:nth-last-child(-n + 4) {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .reporter-profiles__cards {
+    grid-template-columns: 1fr;
+  }
+  .reporter-profile-card:nth-last-child(-n + 4) {
+    display: none;
+  }
+}

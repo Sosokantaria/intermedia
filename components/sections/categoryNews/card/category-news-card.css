@@ -1,0 +1,110 @@
+.category-news-card {
+    background: var(--color-white);
+    margin: 0 auto;
+    overflow: hidden;
+    transition: transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border-radius: var(--radius-sm);
+    padding-bottom: 16px;
+  }
+  
+  .category-news-card:hover {
+    transform: translateY(-4px);
+  }
+  
+  .category-news-card__image {
+    width: 100%;
+    height: 200px;
+    border-radius: 4px 4px 0 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .category-news-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .category-news-card__title {
+    font-family: var(--font-primary);
+    font-weight: var(--font-normal);
+    font-size: var(--text-xs);
+    line-height: 1.4;
+    color: var(--text-gray-lighter);
+    margin-bottom: 8px;
+  }
+  
+  .category-news-card__description {
+    font-family: var(--font-primary);
+    font-size: var(--text-sm);
+    line-height: 1.5;
+    color: var(--text-dark);
+    margin-bottom: 12px;
+  }
+  
+  .category-news-card__content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 0 16px;
+  }
+  
+  .category-news-card__footer {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .category-news-card__author-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+  
+  .category-news-card__author-info {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 4px;
+  }
+  
+  .category-news-card__author-name {
+    font-family: var(--font-primary);
+    font-weight: var(--font-medium);
+    font-size: var(--text-sm);
+    color: var(--text-gray-lighter);
+    display: block;
+  }
+  
+  .category-news-card__date {
+    font-family: var(--font-primary);
+    font-size: var(--text-xs);
+    color: var(--text-muted);
+    display: block;
+  }
+  
+  @media screen and (max-width: 1000px) {
+    .category-news-card {
+      align-items: center;
+      background-color: transparent;
+    }
+    .category-news-card__image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .category-news-card__description{
+        color: var(--text-light);
+    }
+    .category-news-card__author-info {
+      gap: 4px;
+    }
+  }
+  
