@@ -1,6 +1,6 @@
 const foursSectionCardsData = [
   {
-    image: "../../assets/GiraffeImg.png",
+    image: "../../assets/gorgasali.png",
     title: "ვინ იყო ვახტანგ გორგასლის დედა?",
     description:
       "მეცნიერებმა შექმნეს გასაოცარი ჰოლოგრამა, რომელსაც შეგიძლია შეეხო და მოუსმინო.",
@@ -8,7 +8,7 @@ const foursSectionCardsData = [
     readTime: "3 წუთი სჭირდება წასაკითხად",
   },
   {
-    image: "../../assets/GiraffeImg.png",
+    image: "../../assets/gorgasali.png",
     title: "ვინ იყო ვახტანგ გორგასლის დედა?",
     description:
       "მეცნიერებმა შექმნეს გასაოცარი ჰოლოგრამა, რომელსაც შეგიძლია შეეხო და მოუსმინო.",
@@ -16,7 +16,7 @@ const foursSectionCardsData = [
     readTime: "3 წუთი სჭირდება წასაკითხად",
   },
   {
-    image: "../../assets/GiraffeImg.png",
+    image: "../../assets/gorgasali.png",
     title: "ვინ იყო ვახტანგ გორგასლის დედა?",
     description:
       "მეცნიერებმა შექმნეს გასაოცარი ჰოლოგრამა, რომელსაც შეგიძლია შეეხო და მოუსმინო.",
@@ -24,7 +24,7 @@ const foursSectionCardsData = [
     readTime: "3 წუთი სჭირდება წასაკითხად",
   },
   {
-    image: "../../assets/GiraffeImg.png",
+    image: "../../assets/gorgasali.png",
     title: "ვინ იყო ვახტანგ გორგასლის დედა?",
     description:
       "მეცნიერებმა შექმნეს გასაოცარი ჰოლოგრამა, რომელსაც შეგიძლია შეეხო და მოუსმინო.",
@@ -32,7 +32,7 @@ const foursSectionCardsData = [
     readTime: "3 წუთი სჭირდება წასაკითხად",
   },
   {
-    image: "../../assets/GiraffeImg.png",
+    image: "../../assets/gorgasali.png",
     title: "ვინ იყო ვახტანგ გორგასლის დედა?",
     description:
       "მეცნიერებმა შექმნეს გასაოცარი ჰოლოგრამა, რომელსაც შეგიძლია შეეხო და მოუსმინო.",
