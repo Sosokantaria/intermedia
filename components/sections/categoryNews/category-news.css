@@ -28,8 +28,11 @@
 }
 
 .category-news__top img {
+  width: 100%;
   max-width: 700px;
-  margin: 0 auto;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
 .category-news__text {
@@ -65,9 +68,10 @@
     padding: 20px 16px 16px 16px;
   }
   .category-news__top img {
-    max-width: 345px;
+    max-width: 100%;
+    width: 100%;
   }
   .category-news__cards {
-flex-direction: column;
+    flex-direction: column;
   }
 }

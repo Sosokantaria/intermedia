@@ -1,81 +1,67 @@
-# Inter Media News Platform
+# InterMedia News Website
 
-A modern, responsive news platform built with HTML, CSS, and JavaScript. The platform features multiple sections with different layouts and interactive components.
-
-## Features
-
-- Responsive design that works on all devices
-- Interactive news cards with hover effects
-- Dynamic content loading
-- Modern UI with smooth animations
-- Multiple section layouts
-- Swiper integration for carousels
-- Badge system for content categorization
+A modern, responsive news website built with vanilla JavaScript, HTML, and CSS. The project follows a modular architecture and uses ES modules for better code organization.
 
 ## Project Structure
 
 ```
-├── index.html
-├── index.css
-├── index.js
-├── assets/
-│   └── images
+InterMedia/
 ├── components/
 │   ├── layout/
 │   │   ├── header/
 │   │   │   ├── header.html
+│   │   │   ├── header.js
 │   │   │   ├── header.css
 │   │   │   └── navigation.js
-│   │   └── footer/
-│   │       ├── footer.html
-│   │       └── footer.css
+│   │   ├── footer/
+│   │   │   ├── footer.html
+│   │   │   ├── footer.js
+│   │   │   └── footer.css
+│   │   ├── layout.html
+│   │   └── layout.js
 │   └── sections/
 │       ├── featuredNews/
-│       │   ├── featured-news.html
-│       │   ├── featured-news.css
-│       │   ├── featured-news.js
-│       │   └── cards/
-│       │       ├── mainCard/
-│       │       │   ├── main-card.html
-│       │       │   ├── main-card.css
-│       │       │   └── main-card.js
-│       │       └── secondaryCard/
-│       │           ├── secondary-card.html
-│       │           ├── secondary-card.css
-│       │           └── secondary-card.js
 │       ├── latestNews/
-│       │   ├── latest-news.html
-│       │   ├── latest-news.css
-│       │   ├── latest-news.js
-│       │   └── card/
-│       │       ├── news-card.html
-│       │       ├── news-card.css
-│       │       └── news-card.js
 │       ├── categoryNews/
-│       │   ├── category-news.html
-│       │   ├── category-news.css
-│       │   ├── category-news.js
-│       │   └── card/
-│       │       ├── category-card.html
-│       │       ├── category-card.css
-│       │       └── category-card.js
 │       ├── trendingNews/
-│       │   ├── trending-news.html
-│       │   ├── trending-news.css
-│       │   ├── trending-news.js
-│       │   └── card/
-│       │       ├── trending-card.html
-│       │       ├── trending-card.css
-│       │       └── trending-card.js
 │       └── reporterProfiles/
-│           ├── reporter-profiles.html
-│           ├── reporter-profiles.css
-│           ├── reporter-profiles.js
-│           └── card/
-│               ├── profile-card.html
-│               ├── profile-card.css
-│               └── profile-card.js
+├── pages/
+│   └── home/
+│       ├── home.html
+│       ├── home.js
+│       └── home.css
+├── index.css
+├── index.html
+├── index.js
 └── README.md
+```
+
+## Features
+
+- **Modular Architecture**: Each component is self-contained with its own HTML, CSS, and JavaScript
+- **Responsive Design**: Fully responsive layout that works on all screen sizes
+- **Dynamic Content Loading**: Components are loaded dynamically using ES modules
+- **Modern Navigation**: Responsive navigation with dropdown menus
+- **News Sections**:
+  - Featured News
+  - Latest News
+  - Category News
+  - Trending News
+  - Reporter Profiles
+
+## Technologies Used
+
+- HTML5
+- CSS3 (with CSS Variables for theming)
+- Vanilla JavaScript (ES6+)
+- ES Modules
+- Swiper.js for carousels
+
+## Getting Started
+
+1. Clone the repository:
+```bash
+git clone [repository-url]
 ```
 
 ## Components
@@ -91,17 +77,19 @@ A modern, responsive news platform built with HTML, CSS, and JavaScript. The pla
 - **Trending News**: Carousel of popular/trending articles
 - **Reporter Profiles**: Grid of reporter information with badges
 
-## Setup
+### Styling Guidelines
 
-1. Clone the repository
-2. Open `index.html` in your browser
-3. No build process required - it's pure HTML, CSS, and JavaScript
+- Use CSS variables for consistent theming
+- Follow BEM naming convention for CSS classes
+- Keep styles modular and component-specific
+- Use responsive units (rem, em, %) for better scaling
 
-## Dependencies
+### JavaScript Guidelines
 
-- Swiper.js for carousel functionality
-- Google Material Icons
-- Google Fonts
+- Use ES modules for code organization
+- Export initialization functions for components
+- Handle errors appropriately
+- Use async/await for asynchronous operations
 
 ## Browser Support
 
