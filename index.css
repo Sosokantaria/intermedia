@@ -31,6 +31,8 @@
   --border-button: #2e2e2e99;
   --border-button-dark: #2e2e2e;
 
+  --swiper-navigation-size: 16px !important;
+
   --font-primary: "Inter", sans-serif;
   --font-heading: "Inter", sans-serif;
   --font-mono: "Courier New", monospace;
