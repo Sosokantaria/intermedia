@@ -1,6 +1,6 @@
 .reporter-profile-card {
   border: 0.5px solid;
-  width: 320px;
+  width: 100%;
   margin: 0 auto;
   border-color: var(--border-color-secondary);
   border-radius: var(--radius-base);
@@ -13,6 +13,7 @@
 .reporter-profile-card__top-content {
   display: flex;
   gap: 12px;
+  width: 100%;
 }
 
 .reporter-profile-card__image {
@@ -61,4 +62,25 @@
   border: 0.5px solid;
   border-color: var(--border-color-secondary);
   border-radius: var(--radius-base);
+}
+
+@media screen and (max-width: 768px) {
+  .reporter-profile-card__top-content {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .reporter-profile-card__image{
+    margin: 0 auto;
+  }
+  .reporter-profile-card__title{
+    display: flex;
+    justify-content: center;
+  }
+  .reporter-profile-card__badge{
+    display: none;
+  }
+  .reporter-profile-card__description{
+    display: flex;
+    justify-content: center;
+  }
 }
