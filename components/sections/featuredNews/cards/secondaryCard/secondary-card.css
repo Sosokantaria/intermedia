@@ -64,13 +64,13 @@
   min-width: 160px;
 }
 
-.rect-content{
-    display: flex;
-    width: 100%;
-    justify-content: end;
-    align-items: end;
-    gap: 5px;
-    flex-direction: column;
+.rect-content {
+  display: flex;
+  width: 100%;
+  justify-content: end;
+  align-items: end;
+  gap: 5px;
+  flex-direction: column;
 }
 .rectangle1 {
   width: 165px;
@@ -81,14 +81,33 @@
 }
 
 .rectangle2 {
-    width: 127px;
-    height: 5px;
-    border-radius: 22px;
-    background-color: #000000;
-
-  }
+  width: 127px;
+  height: 5px;
+  border-radius: 22px;
+  background-color: #000000;
+}
 
 @media screen and (max-width: 768px) {
+  .title {
+    font-size: var(--text-sm);
+  }
+  .subText {
+    font-size: var(--text-xs);
+  }
+  .features-list li{
+    font-size: var(--text-xs);
+  }
+
+  .btn__secondary__medium{
+    padding: 6.5px 8.5px;
+    font-size: var(--text-xs);
+    max-width: 116px;
+  }
+  .second__card img {
+    width: 22.41px;
+    height: 49px;
+    right: 0;
+  }
   .second__card {
     border: 1px solid;
     border-color: var(--border-light);

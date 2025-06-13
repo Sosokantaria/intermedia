@@ -126,6 +126,9 @@
   .trending-news::after {
     display: none;
   }
+  .trending-news__title{
+    font-size: var(--text-sm);
+  }
   .trending-news__title-container {
     padding: 0 24px;
   }

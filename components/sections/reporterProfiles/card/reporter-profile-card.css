@@ -75,6 +75,8 @@
   .reporter-profile-card__title{
     display: flex;
     justify-content: center;
+    font-size: var(--text-sm);
+    white-space: nowrap;
   }
   .reporter-profile-card__badge{
     display: none;

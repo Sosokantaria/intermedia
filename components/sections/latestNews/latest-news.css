@@ -21,9 +21,9 @@
   border: none;
   margin: 0;
 }
-.latest-news__cards__container{
+.latest-news__cards__container {
   display: flex;
- justify-content: center;
+  justify-content: center;
   width: 100%;
 }
 
@@ -41,6 +41,9 @@
 }
 
 @media screen and (max-width: 768px) {
+  .latest-news__header h1 {
+    font-size: var(--text-sm);
+  }
   .latest-news {
     padding-bottom: 0;
   }

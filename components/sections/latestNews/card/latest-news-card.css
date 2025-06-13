@@ -80,6 +80,9 @@
 }
 
 @media screen and (max-width: 768px) {
+  .latest-news-card__title {
+    font-size: var(--text-sm);
+  }
   .latest-news-card {
     flex-direction: row-reverse;
     align-items: center;
@@ -94,5 +97,10 @@
   .latest-news-card__author-info {
     flex-direction: row;
     gap: 4px;
+  }
+  .latest-news-card__author-name,
+  .latest-news-card__date {
+    font-size: var(--text-xs);
+    color: var(--text-muted);
   }
 }
