@@ -151,6 +151,7 @@ nav ul {
   .nav-item-category {
     display: flex;
   }
+  
 }
 @media screen and (max-width: 1200px) {
   .nav-item-categorty {
@@ -236,3 +237,57 @@ nav ul {
     padding: 0 20px;
   }
 }
+
+@media screen and (min-width: 1268px) and (max-width: 1467px) {
+  #nav-list li:nth-child(n + 10),
+  #mobile-nav-list li:nth-child(n + 10) {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1068px) and (max-width: 1267px) {
+  #nav-list li:nth-child(n + 9),
+  #mobile-nav-list li:nth-child(n + 9) {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 968px) and (max-width: 1067px) {
+  #nav-list li:nth-child(n + 8),
+  #mobile-nav-list li:nth-child(n + 8) {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 967px) {
+  #nav-list li:nth-child(n + 6),
+  #mobile-nav-list li:nth-child(n + 6) {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 767px) {
+  #nav-list li:nth-child(n + 5),
+  #mobile-nav-list li:nth-child(n + 5) {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 599px) {
+  #mobile-nav-list li:nth-child(n + 4) {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #nav-list li {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  #mobile-nav-list li {
+    display: none;
+  }
+}
+

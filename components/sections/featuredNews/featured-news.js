@@ -65,7 +65,7 @@ export async function initializeFeaturedNews() {
 
     for (let i = 0; i < cardsData.length; i++) {
       const cardData = cardsData[i];
-
+      
       if (cardData.type === "secondaryCard") {
         const cardHtml = await loadSecondaryCard(cardData);
         if (cardHtml) {
@@ -82,3 +82,4 @@ export async function initializeFeaturedNews() {
     console.error("Error in initializeFeaturedNews:", error);
   }
 }
+ 

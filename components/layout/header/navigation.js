@@ -53,34 +53,6 @@ const navigationItems = [
   },
 ];
 
-const BREAKPOINTS = {
-  DESKTOP: 1468,
-  LAPTOP: 1268,
-  TABLET: 1068,
-  SMALL_TABLET: 968,
-  LARGE_MOBILE: 768,
-  MOBILE: 600,
-  SMALL_MOBILE: 500
-};
-
-const VISIBLE_ITEMS = {
-  [BREAKPOINTS.DESKTOP]: 10,
-  [BREAKPOINTS.LAPTOP]: 9,
-  [BREAKPOINTS.TABLET]: 8,
-  [BREAKPOINTS.SMALL_TABLET]: 7,
-  [BREAKPOINTS.LARGE_MOBILE]: 5,
-  [BREAKPOINTS.MOBILE]: 4,
-  [BREAKPOINTS.SMALL_MOBILE]: 3
-};
-
-function getVisibleItemsCount() {
-  const width = window.innerWidth;
-  for (const [breakpoint, count] of Object.entries(VISIBLE_ITEMS)) {
-    if (width < breakpoint) return count;
-  }
-  return navigationItems.length;
-}
-
 function createDropdownOptions() {
   const dropdown = document.createElement("div");
   dropdown.className = "dropdown-options";
@@ -125,16 +97,16 @@ function createNavItem(item) {
   button.textContent = item.label;
   button.classList = "button-text";
 
-  const showCategory = window.innerWidth <= BREAKPOINTS.LAPTOP;
-  const isDropdownItem = (showCategory && item.path === "/category") || 
-                        (!showCategory && item.path === "/more");
-
-  if (isDropdownItem) {
+  if (item.path === "/category" || item.path === "/more") {
     createDropdownButton(button, item);
   }
 
   if (item.path === "/category") {
     button.classList.add("nav-item-category");
+  }
+
+  if (item.path === "/more") {
+    button.classList.add("nav-item-more");
   }
 
   li.appendChild(button);
@@ -144,23 +116,13 @@ function createNavItem(item) {
 export function initializeNavigation() {
   const desktopNavList = document.getElementById("nav-list");
   const mobileNavList = document.getElementById("mobile-nav-list");
-  
+
   if (!desktopNavList || !mobileNavList) return;
 
   desktopNavList.innerHTML = "";
   mobileNavList.innerHTML = "";
-  
-  const visibleCount = getVisibleItemsCount();
-  const showCategory = window.innerWidth <= BREAKPOINTS.LAPTOP;
 
-  navigationItems.forEach((item, index) => {
-    if ((showCategory && item.path === "/more") || 
-        (!showCategory && item.path === "/category")) {
-      return;
-    }
-    
-    if (index >= visibleCount && item.path !== "/more" && item.path !== "/category") return;
-    
+  navigationItems.forEach((item) => {
     const desktopNavItem = createNavItem(item);
     const mobileNavItem = createNavItem(item);
     desktopNavList.appendChild(desktopNavItem);
@@ -168,23 +130,6 @@ export function initializeNavigation() {
   });
 }
 
-// Initialize when DOM is ready
-document.addEventListener('DOMContentLoaded', () => {
-  const observer = new MutationObserver((mutations) => {
-    const desktopNavList = document.getElementById("nav-list");
-    const mobileNavList = document.getElementById("mobile-nav-list");
-    if (desktopNavList && mobileNavList) {
-      observer.disconnect();
-      initializeNavigation();
-    }
-  });
-
-  observer.observe(document.body, {
-    childList: true,
-    subtree: true,
-  });
-});
-
-window.addEventListener("resize", () => {
+document.addEventListener("DOMContentLoaded", () => {
   initializeNavigation();
 });
