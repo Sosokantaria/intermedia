@@ -1,7 +1,10 @@
 section {
   width: 100%;
 }
-
+.feachered__news__container{
+  display: flex;
+  
+}
 .cards-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
