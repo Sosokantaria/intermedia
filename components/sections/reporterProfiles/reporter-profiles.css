@@ -1,25 +1,3 @@
-.reporter-profiles__header {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.reporter-profiles__title {
-  font-family: var(--font-primary);
-  font-weight: var(--font-bold);
-  font-size: var(--text-lg);
-  color: var(--color-dark);
-  white-space: nowrap;
-}
-
-.reporter-profiles__header hr {
-  width: 100%;
-  height: 1px;
-  background-color: var(--border-color-secondary);
-  border: none;
-  margin: 0;
-}
-
 .reporter-profiles__cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

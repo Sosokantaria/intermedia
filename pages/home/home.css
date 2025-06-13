@@ -1,7 +1,7 @@
 .home-page {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 32px;
   padding: 40px 0;
 }
 
@@ -9,14 +9,7 @@
 .home-page__latest-news,
 .home-page__category-news,
 .home-page__trending-news,
-.home-page__reporter-profiles {
+.home-page__reporter-profiles,
+.home-page__news {
   width: 100%;
-}
-
-@media screen and (max-width: 768px) {
-  .home-page {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-  }
 }

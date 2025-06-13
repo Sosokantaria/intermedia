@@ -76,14 +76,3 @@ export async function initializeLatestNews() {
     console.error("Error in initializeLatestNews:", error);
   }
 }
-
-// Remove the DOMContentLoaded event listener since we're now exporting the function
-// const waitForLatestNews = async () => {
-//   if (typeof loadNewsCard === "function") {
-//     await initializeLatestNews();
-//   } else {
-//     console.error("Latest news card loading function is not available!");
-//   }
-// };
-// 
-// document.addEventListener("DOMContentLoaded", waitForLatestNews);

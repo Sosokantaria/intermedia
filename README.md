@@ -23,7 +23,8 @@ InterMedia/
 │       ├── latestNews/
 │       ├── categoryNews/
 │       ├── trendingNews/
-│       └── reporterProfiles/
+│       ├── reporterProfiles/
+│       └── news/
 ├── pages/
 │   └── home/
 │       ├── home.html

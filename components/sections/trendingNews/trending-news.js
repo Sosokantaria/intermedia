@@ -108,11 +108,3 @@ export async function initializeTrendingNews() {
     console.error("Error in initializeTrendingNews:", error);
   }
 }
-
-window.addEventListener("load", async () => {
-  if (typeof loadTrendingCard === "function") {
-    await initializeTrendingNews();
-  } else {
-    console.error("Trending card loading function is not available!");
-  }
-});

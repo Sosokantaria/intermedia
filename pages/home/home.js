@@ -3,6 +3,7 @@ import { initializeLatestNews } from "../../components/sections/latestNews/lates
 import { initializeCategoryNews } from "../../components/sections/categoryNews/category-news.js";
 import { initializeTrendingNews } from "../../components/sections/trendingNews/trending-news.js";
 import { initializeReporterProfiles } from "../../components/sections/reporterProfiles/reporter-profiles.js";
+import { initializeNews } from "../../components/sections/news/news.js";
 
 async function loadSection(container, sectionPath) {
   try {
@@ -69,6 +70,15 @@ export async function initialize() {
       "../../components/sections/reporterProfiles/reporter-profiles.html"
     );
     await initializeReporterProfiles();
+  }
+
+  const newsContainer = document.getElementById("news-container");
+  if (newsContainer) {
+    await loadSection(
+      newsContainer,
+      "../../components/sections/news/news.html"
+    );
+    await initializeNews();
   }
 }
 

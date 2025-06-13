@@ -85,12 +85,3 @@ export async function initializeReporterProfiles() {
   }
 }
 
-const waitForReporterProfiles = async () => {
-  if (typeof loadReporterProfileCard === "function") {
-    await initializeReporterProfiles();
-  } else {
-    console.error("Profile card loading function is not available!");
-  }
-};
-
-document.addEventListener("DOMContentLoaded", waitForReporterProfiles);

@@ -66,6 +66,3 @@ const waitForCategoryNews = async () => {
     console.error("Category card loading function is not available!");
   }
 };
-
-// Remove the DOMContentLoaded event listener since we're now exporting the function
-// document.addEventListener("DOMContentLoaded", waitForCategoryNews);
