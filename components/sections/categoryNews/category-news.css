@@ -9,13 +9,17 @@
 
 .category-news__top {
   display: flex;
+  justify-content: center;
   gap: 24px;
+  max-width: 1320px;
+  margin: 0 auto;
 }
 
 .category-news__content {
   display: flex;
   flex-direction: column;
   gap: 11px;
+  max-width: 670px;
 }
 
 .category-news__title {
@@ -57,7 +61,12 @@
     line-height: 1.5;
   }
 }
-
+.category-news__cards__container{
+  display: flex;
+  justify-content: center;
+  max-width: 1320px;
+  margin: 0 auto;
+}
 .category-news__cards {
   display: flex;
   gap: 20px;

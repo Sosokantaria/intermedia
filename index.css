@@ -90,7 +90,9 @@ main {
 }
 
 .main__wrapper {
-  padding: 60px 60px 0px 60px;
+  padding: 60px  0px 30px;
+  max-width: 1320px;
+  margin: 0 auto;
 }
 
 .button-text {
@@ -149,13 +151,18 @@ main {
   cursor: pointer;
   white-space: nowrap;
 }
+@media screen and (max-width: 768px) {
+  .main__wrapper{
+    padding: 0px 60px;
+  }
+}
 
 @media screen and (max-width: 768px) {
   main {
     margin-top: 30px;
   }
   .main__wrapper {
-    padding: 15px 30px;
+    padding: 0px 16px;
     gap: 0px;
   }
 }

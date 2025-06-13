@@ -5,6 +5,8 @@
   padding: 18px 60px 12px 32px;
   display: flex;
   flex-direction: column;
+  align-self: end;
+  justify-self: end;
   gap: 16px;
 }
 
