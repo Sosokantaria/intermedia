@@ -91,8 +91,7 @@ main {
   flex-direction: column;
 }
 
-.main__wrapper {
-  padding: 60px  0px 30px;
+.width__wrapper {
   max-width: 1320px;
   margin: 0 auto;
 }
@@ -153,11 +152,6 @@ main {
   cursor: pointer;
   white-space: nowrap;
 }
-@media screen and (max-width: 768px) {
-  .main__wrapper{
-    padding: 0px 60px;
-  }
-}
 
 @media screen and (max-width: 768px) {
   main {
@@ -166,5 +160,10 @@ main {
   .main__wrapper {
     padding: 0px 16px;
     gap: 0px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  .main__wrapper {
+    padding: 0px 30px;
   }
 }

@@ -15,7 +15,9 @@
 
 @media screen and (max-width: 768px) {
   .home-page {
-    gap: 24px;
-    padding: 24px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin: 32px 0;
   }
 }

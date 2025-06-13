@@ -4,12 +4,7 @@ header {
   width: 100%;
   border-bottom: 1px solid;
   border-color: var(--border-color-primary);
-  padding: 0px 60px;
   position: relative;
-}
-.main-nav {
-  max-width: 1320px;
-  margin: 0 auto;
 }
 nav {
   width: 100%;
