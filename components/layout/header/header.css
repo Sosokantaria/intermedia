@@ -15,7 +15,7 @@ nav {
 .nav-content {
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: center;
 }
 nav ul {
   display: flex;
