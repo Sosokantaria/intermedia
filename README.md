@@ -11,8 +11,7 @@ InterMedia/
 │   │   ├── header/
 │   │   │   ├── header.html
 │   │   │   ├── header.js
-│   │   │   ├── header.css
-│   │   │   └── navigation.js
+│   │   │   └── header.css
 │   │   ├── footer/
 │   │   │   ├── footer.html
 │   │   │   ├── footer.js

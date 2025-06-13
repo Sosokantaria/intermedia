@@ -1,4 +1,4 @@
-import { initializeHeader } from "./header/header.js";
+import { initializeNavigation } from "./header/header.js";
 
 async function loadComponent(container, path) {
   try {
@@ -34,7 +34,7 @@ export async function initializeLayout() {
       headerContainer,
       "./components/layout/header/header.html"
     );
-    await initializeHeader();
+    await initializeNavigation();
   }
 
   const mainContainer = document.querySelector(".layout__main");
