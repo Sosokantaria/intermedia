@@ -61,7 +61,7 @@ InterMedia/
 
 1. Clone the repository:
 ```bash
-git clone [repository-url]
+git clone [https://github.com/Sosokantaria/intermedia.git]
 ```
 
 2. Open the project in your code editor
