@@ -1,4 +1,5 @@
-import { loadMainCard } from "./cards/mainCard/main-card.js";
+// import { loadMainCard } from "./cards/mainCard/main-card.js";
+import { loadCard } from "../../../ui/card/card.js";
 import { loadSecondaryCard } from "./cards/secondaryCard/secondary-card.js";
 
 const cardsData = [
@@ -65,14 +66,17 @@ export async function initializeFeaturedNews() {
 
     for (let i = 0; i < cardsData.length; i++) {
       const cardData = cardsData[i];
-      
+
       if (cardData.type === "secondaryCard") {
         const cardHtml = await loadSecondaryCard(cardData);
         if (cardHtml) {
           container.innerHTML += cardHtml;
         }
       } else {
-        const cardHtml = await loadMainCard(cardData);
+        const cardHtml = await loadCard({
+          ...cardData,
+          className: "primary__card",
+        });
         if (cardHtml) {
           container.innerHTML += cardHtml;
         }
@@ -82,4 +86,3 @@ export async function initializeFeaturedNews() {
     console.error("Error in initializeFeaturedNews:", error);
   }
 }
- 
