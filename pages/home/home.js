@@ -81,5 +81,3 @@ export async function initialize() {
     await initializeNews();
   }
 }
-
-document.addEventListener("DOMContentLoaded", initialize);

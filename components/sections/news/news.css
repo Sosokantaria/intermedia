@@ -19,3 +19,31 @@
   border: none;
   margin: 0;
 }
+
+.news__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 24px;
+}
+
+@media screen and (max-width: 1024px) {
+  .news__cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .news__header h1 {
+    font-size: var(--text-sm);
+  }
+  .news {
+    padding-bottom: 0;
+  }
+  .news__cards {
+    grid-template-columns: 1fr;
+  }
+  .news__cards > *:nth-child(n + 3) {
+    display: none;
+  }
+}

@@ -1,4 +1,4 @@
-import { loadNewsCard } from './card/latest-news-card.js';
+import { loadCard } from '../../../ui/card/card.js';
 
 const latestNewsCardsData = [
   {
@@ -67,7 +67,7 @@ export async function initializeLatestNews() {
     container.innerHTML = '';
 
     for (const cardData of latestNewsCardsData) {
-      const cardHtml = await loadNewsCard(cardData);
+      const cardHtml = await loadCard({...cardData,className:"mobile__row-reverse__card"});
       if (cardHtml) {
         container.innerHTML += cardHtml;
       }

@@ -1,0 +1,164 @@
+.global-card {
+  background: var(--color-white);
+  margin: 0 auto;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+  display: flex;
+  /* flex-direction: column; */
+  gap: 12px;
+}
+
+.global-card:hover {
+  transform: translateY(-4px);
+}
+
+.global-card__image {
+  width: 100%;
+  height: 200px;
+  border-radius: var(--radius-base);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.global-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.global-card__title {
+  font-family: var(--font-primary);
+  font-weight: var(--font-medium);
+  font-size: var(--text-base);
+  line-height: 1.4;
+  color: var(--color-dark);
+  margin-bottom: 8px;
+}
+
+.global-card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.global-card__footer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.global-card__author-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.global-card__author-info {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.global-card__author-name {
+  font-family: var(--font-primary);
+  font-weight: var(--font-medium);
+  font-size: var(--text-sm);
+  color: var(--color-dark);
+  display: block;
+}
+
+.global-card__date {
+  font-family: var(--font-primary);
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  display: block;
+}
+
+.global-card-description {
+  display: none;
+}
+.global-card__mobile__footer {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .global-card {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .global-card__title {
+    font-size: var(--text-sm);
+  }
+  .mobile__row-reverse__card {
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+  .mobile__column__card {
+    flex-direction: column-reverse;
+    align-items: center;
+    width: 100%;
+    max-width: 350px;
+  }
+  .mobile__row-reverse__card .global-card__image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 88px;
+    max-height: 87px;
+  }
+  .mobile__row-reverse__card .global-card__title {
+    max-width: 250px;
+  }
+  .global-card__title {
+    font-size: var(--text-base);
+    font-weight: var(--font-medium);
+    line-height: 22px;
+  }
+  .mobile__column__card .global-card__footer {
+    display: none;
+  }
+  .mobile__column__card .global-card-description {
+    font-size: var(--text-sm);
+    color: var(--text-gray-primary);
+    font-family: var(--font-primary);
+    font-weight: var(--font-normal);
+    line-height: 18px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .mobile__column__card .global-card__mobile__footer {
+    display: flex;
+    width: 100%;
+    justify-content: start;
+    align-items: center;
+    gap: 4px;
+  }
+  .global-card__mobile__footer img {
+    width: 12.74px;
+    height: 12.74px;
+  }
+  .global-card__mobile__footer .global-card__author-info {
+    display: flex;
+    align-items: center;
+  }
+  .global-card__author-info {
+    flex-direction: row;
+    gap: 4px;
+  }
+  .global-card__author-name,
+  .global-card__date {
+    font-size: var(--text-xs);
+    color: var(--text-muted);
+  }
+}
