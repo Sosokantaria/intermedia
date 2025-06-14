@@ -6,6 +6,7 @@ A modern, responsive news website built with vanilla JavaScript, HTML, and CSS. 
 
 ```
 InterMedia/
+├── assets/
 ├── components/
 │   ├── layout/
 │   │   ├── header/
@@ -30,6 +31,11 @@ InterMedia/
 │       ├── home.html
 │       ├── home.js
 │       └── home.css
+├── ui/
+│   └──card/
+│       ├── card.html
+│       ├── card.js
+│       └── card.css
 ├── index.css
 ├── index.html
 ├── index.js
